@@ -3,6 +3,8 @@ typeattribute xiaomiparts_app mlstrustedsubject;
 
 app_domain(xiaomiparts_app)
 
+allow xiaomiparts_app audioserver_service:service_manager find;
+
 # Access standard system services
 allow xiaomiparts_app app_api_service:service_manager find;
 
@@ -24,3 +26,4 @@ set_prop(xiaomiparts_app, vendor_thermal_prop)
 
 # Allow XiaomiParts to get settingsdebug.instant.packages prop
 get_prop(xiaomiparts_app, settingslib_prop)
+
